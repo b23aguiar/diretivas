@@ -1,0 +1,29 @@
+<h1>Diretiva *ngIf</h1>
+
+<div *ngIf="cursos.length > 0">
+  Lista de cursos:
+</div>
+
+<div *ngIf="cursos.length == 0">
+  Não há cursos a serem listados.
+</div>
+
+<div *ngIf="mostrarCursos">
+  Lista de cursos:
+</div>
+
+<div *ngIf="!mostrarCursos">
+  Não há cursos a serem listados.
+</div>
+
+<br>
+
+<button (click)="onMostrarCursos()">Mostrar/Ocultar Cursos</button>
+
+<br>
+
+<h1>Removendo o * e usando template</h1>
+
+<div template="ngIf !mostrarCursos">
+  Lista de cursos:
+</div>
